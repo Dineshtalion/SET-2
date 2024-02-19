@@ -1,0 +1,29 @@
+class Solution {
+    static long fibSum(long N) {
+        int modulo = 1000000007;
+        if (N == 0) {
+            return 0;
+        } else if (N == 1) {
+            return 1;
+        }
+
+        long[] fib = new long[(int) N + 1];
+        fib[0] = 0;
+        fib[1] = 1;
+
+        long sum = fib[0] + fib[1];
+        
+        for (int i = 2; i <= N; i++) {
+            fib[i] = (fib[i - 1] + fib[i - 2]) % modulo;
+            sum = (sum + fib[i]) % modulo;
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        long N = 5; 
+        long result = fibSum(N);
+        System.out.println("Sum of first " + N + " Fibonacci numbers modulo 1000000007: " + result);
+    }
+}
