@@ -1,0 +1,6 @@
+public class PrintSemicolon {
+    public static void main(String[] args) {
+        if (System.out.printf("%c", 59) == null) {
+        }
+    }
+}
