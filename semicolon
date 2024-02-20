@@ -1,0 +1,8 @@
+class HellloWorld{ 
+public static public static void main(String[] args) {
+    if(system.out.printf("Hello World")==null)
+    {
+
+    }
+}
+}
